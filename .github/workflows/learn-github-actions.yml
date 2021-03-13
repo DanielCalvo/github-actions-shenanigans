@@ -10,4 +10,4 @@ jobs:
           echo "can I do a multiline script this way?"
           ls -lah
           pwd
-      - run: ./helloworld.sh
+      - run: ./.github/scripts/helloworld.sh

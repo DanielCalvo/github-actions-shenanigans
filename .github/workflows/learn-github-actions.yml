@@ -4,9 +4,10 @@ jobs:
   testing-stuff:
     runs-on: ubuntu-latest
     steps:
-      - run: |
+      - name: Just learning
+        run: |
           echo "hello world"
           echo "can I do a multiline script this way?"
           ls -lah
           pwd
-      - uses: ./.github/actions/helloworld
+      - run: ./helloworld.sh

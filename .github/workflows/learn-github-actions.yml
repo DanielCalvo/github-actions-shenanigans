@@ -1,12 +1,12 @@
 name: learn-github-actions
 on: [push]
 jobs:
-  check-bats-version:
+  testing-stuff:
     runs-on: ubuntu-latest
     steps:
       - run: |
           echo "hello world"
           echo "can I do a multiline script this way?"
-          date
-          whoami
-          cat /etc/passwd
+          ls -lah
+          pwd
+      - uses: ./.github/actions/helloworld

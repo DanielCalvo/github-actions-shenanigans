@@ -5,8 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-        echo "hello world"
-        echo "can I do a multiline script this way?"
-        date
-        whoami
-        cat /etc/passwd
+          echo "hello world"
+          echo "can I do a multiline script this way?"
+          date
+          whoami
+          cat /etc/passwd

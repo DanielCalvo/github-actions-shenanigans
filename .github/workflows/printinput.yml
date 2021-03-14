@@ -1,11 +1,12 @@
 on: [push]
 jobs:
-  hello_world_job:
+  A-job-to-say-hello:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
-    - uses: actions/checkout@v2
-    - name: That other action
+    - name: checkout
+      uses: actions/checkout@v2
+    - name: Hello world says hello!
       uses: ./.github/actions/helloworld
       with:
         what-to-print: "something!"

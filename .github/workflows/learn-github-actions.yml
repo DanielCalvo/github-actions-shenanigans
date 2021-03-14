@@ -13,7 +13,6 @@ jobs:
           ls -lah
           pwd
       - run: ./helloworld.sh
-
       - name: That other action
         uses: ./.github/actions/helloworld
 

@@ -1,0 +1,1 @@
+echo "You called printinput. Have a nice day!"

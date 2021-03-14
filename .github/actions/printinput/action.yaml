@@ -1,0 +1,16 @@
+name: printinput
+description: Prinst the inputs passed to this action
+inputs:
+  what-to-print:
+    description: What is to be printed
+    required: true
+    default: ["banana", "apple", "grape"]
+runs:
+  using: "composite"
+  steps:
+    - id: printinput
+      run: ./.github/actions/printinput/printinput.sh ${{ inputs.what-to-print }}
+      shell: bash
+
+#    - run: ${{ github.action_path }}/goodbye.sh
+#      shell: bash

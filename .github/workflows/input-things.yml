@@ -10,3 +10,8 @@ jobs:
       uses: ./.github/actions/printinput
       with:
         what-to-print: "something!"
+    - name: Saving inputs!
+      uses: ./.github/actions/saveinput
+      with:
+        what-to-save: "This string should go in a file"
+        filename: myinput.txt

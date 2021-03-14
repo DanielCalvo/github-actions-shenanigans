@@ -1,0 +1,17 @@
+name: saveinput
+description: saves input to a file
+inputs:
+  what-to-save:
+    description: What is to be saved
+    required: true
+    default: "Nothing was passed! :("
+  filename:
+    description: "Name of the file to save the input"
+    required: true
+    default: saveinput.txt
+runs:
+  using: "composite"
+  steps:
+    - id: saveinput
+      run: ./.github/actions/saveinput/saveinput.sh ${{ inputs.filename }} ${{ inputs.what-to-save }}
+      shell: bash

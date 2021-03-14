@@ -13,5 +13,5 @@ runs:
   using: "composite"
   steps:
     - id: saveinput
-      run: ./.github/actions/saveinput/saveinput.sh ${{ inputs.filename }} ${{ inputs.what-to-save }}
+      run: ./.github/actions/saveinput/saveinput.sh ${{ inputs.what-to-save }} ${{ inputs.filename }}
       shell: bash

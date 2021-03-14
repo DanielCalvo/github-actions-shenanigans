@@ -1,1 +1,1 @@
-echo "You called printinput. Argument passed: $1"
+echo $1 > S2

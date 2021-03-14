@@ -1,8 +1,11 @@
 name: generate-output
 description: Docker github action that generates multi-line output
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: "composite"
+  steps:
+    - id: generate-output
+      run: ./.github/actions/generateoutput/generateoutput.sh
+      shell: bash
 outputs:
   lines:
     description: Dummy output from generate-output

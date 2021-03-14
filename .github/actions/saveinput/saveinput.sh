@@ -1,3 +1,3 @@
-echo $1 > S2
+echo $1 > $2
 pwd
 ls -lah

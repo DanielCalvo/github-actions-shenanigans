@@ -1,0 +1,16 @@
+on: [push]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: Writing and reading from riles
+    steps:
+    - uses: actions/checkout@v2
+
+    - id: write-to-file
+      run: echo "This goes in the file" > file.txt
+      shell: bash
+
+    - id: read-from-file
+      run: cat file.txt
+      shell: bash

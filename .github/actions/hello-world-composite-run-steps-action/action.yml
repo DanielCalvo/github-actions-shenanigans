@@ -16,7 +16,9 @@ runs:
       shell: bash
     - id: random-number-generator
       run: |
-        echo "::set-output name=random-id::echo It was a trick!\nA multiline trick! :D"
+        echo "::set-output name=random-id::echo It was a trick! :D"
+        echo "::set-output name=random-id::echo It was another trick! :D"
+
       shell: bash
     - run: ${{ github.action_path }}/goodbye.sh
       shell: bash

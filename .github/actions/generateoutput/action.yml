@@ -1,0 +1,8 @@
+name: generate-output
+description: Docker github action that generates multi-line output
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+outputs:
+  lines:
+    description: Dummy output from generate-output

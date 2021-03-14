@@ -7,6 +7,15 @@ jobs:
     steps:
     - name: checkout
       uses: actions/checkout@v2
+
     - name: sample-docker
       id: sample-docker
       uses: ./.github/actions/sample-docker
+
+    - name: generateoutput
+      uses: ./.github/actions/generateoutput
+
+    - name: printinput
+      uses: ./.github/actions/printinput
+      with:
+        what-to-print: ${{ steps.generateoutput.outputs.lines }}

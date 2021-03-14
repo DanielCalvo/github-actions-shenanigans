@@ -1,0 +1,5 @@
+name: sample-docker
+description: sample docker container action
+runs:
+  using: 'docker'
+  image: 'Dockerfile'

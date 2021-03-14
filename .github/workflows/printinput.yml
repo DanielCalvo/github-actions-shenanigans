@@ -7,6 +7,6 @@ jobs:
     - name: checkout
       uses: actions/checkout@v2
     - name: Hello world says hello!
-      uses: ./.github/actions/helloworld
+      uses: ./.github/actions/printinput
       with:
         what-to-print: "something!"

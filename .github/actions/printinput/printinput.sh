@@ -1,1 +1,1 @@
-echo "You called printinput. Have a nice day!"
+echo "You called printinput. Argument passed: $1"

@@ -1,7 +1,21 @@
-name: daniaction
-description: says hello
+name: 'Hello World'
+description: 'Greet someone'
+inputs:
+  who-to-greet:  # id of input
+    description: 'Who to greet'
+    required: true
+    default: 'World'
+outputs:
+  random-number:
+    description: "Random number"
+    value: ${{ steps.random-number-generator.outputs.random-id }}
 runs:
   using: "composite"
   steps:
-    - run: $GITHUB_ACTION_PATH/helloworld.sh
+    - run: echo Hello ${{ inputs.who-to-greet }}.
+      shell: bash
+    - id: random-number-generator
+      run: echo "::set-output name=random-id::$(echo $RANDOM)"
+      shell: bash
+    - run: ${{ github.action_path }}/goodbye.sh
       shell: bash

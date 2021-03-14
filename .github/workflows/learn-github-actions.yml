@@ -4,10 +4,21 @@ jobs:
   testing-stuff:
     runs-on: ubuntu-latest
     steps:
+      - name: "Checkout"
+        uses: actions/checkout@master
       - name: Just learning
         run: |
           echo "hello world"
           echo "can I do a multiline script this way?"
           ls -lah
           pwd
-      - run: ./.github/scripts/helloworld.sh
+      - run: ./helloworld.sh
+
+      - name: That other action
+        uses: ./.github/actions/helloworld
+
+#  another-job:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - run: |
+#          echo "hey another step!"

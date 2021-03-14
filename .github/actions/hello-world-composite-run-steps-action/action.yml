@@ -15,7 +15,10 @@ runs:
     - run: echo Hello ${{ inputs.who-to-greet }}.
       shell: bash
     - id: random-number-generator
-      run: echo "::set-output name=random-id::$(echo It was a trick! :D)"
+      run: |
+        echo "::set-output name=random-id::echo It was a trick!
+        A multiline trick! :D
+        Can I even fit another line in here?"
       shell: bash
     - run: ${{ github.action_path }}/goodbye.sh
       shell: bash

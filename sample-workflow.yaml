@@ -16,4 +16,6 @@ jobs:
       uses: ./.github/actions/generateoutput
 
     - name: printinput
-      run: echo ${{ steps.generateoutput.outputs.lines }}
+      uses: ./.github/actions/printinput
+      with:
+        what-to-print: ${{ steps.generateoutput.outputs.lines }}

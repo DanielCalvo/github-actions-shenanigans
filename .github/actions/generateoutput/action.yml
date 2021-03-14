@@ -9,3 +9,4 @@ runs:
 outputs:
   lines:
     description: Dummy output from generate-output
+    value: asdasdasd

@@ -7,10 +7,12 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - id: foo
-      uses: ./.github/actions/hello-world-composite-run-steps-action
-      with:
-        who-to-greet: 'Mona the Octocat'
+    - id: sample-docker-output
+      name: sample-docker-output
+      uses: ./.github/actions/sample-docker-output
 
-    - run: echo random-number ${{ steps.foo.outputs.random-number }}
-      shell: bash
+    - id: sample-docker-processing
+      name: sample-docker-processing
+      uses: ./.github/actions/sample-docker-processing
+      env:
+        them_files: '${{ steps.sample-docker-output.outputs.processed-files }}'

@@ -2,6 +2,7 @@ on: [push]
 
 jobs:
   hello_world_job:
+    concurrency: my-concurrent-group
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
